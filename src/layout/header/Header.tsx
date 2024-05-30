@@ -26,4 +26,5 @@ const StyledHeader = styled.header`
   right: 0;
   background-color: black;
   padding: 40px 0;
+  z-index: 99999;
 `;
