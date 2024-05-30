@@ -23,11 +23,16 @@ export const Menu = (props: MenuPropsType) => {
 const StyledMenu = styled.nav`
   ul {
     display: flex;
-    list-style-type: none;
     gap: 50px;
+    font-family: "DM Sans", sans-serif;
+    font-weight: 500;
+    font-size: 26px;
   }
   a {
-    text-decoration: none;
     color: #a7a7a7;
+    cursor: pointer;
+    :hover {
+      color: #d6d5d5;
+    }
   }
 `;

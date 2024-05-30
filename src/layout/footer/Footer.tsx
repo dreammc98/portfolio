@@ -1,12 +1,15 @@
 import styled from "styled-components";
 import { SocialIcon } from "../../components/SocialIcon";
+import { Container } from "../../components/Container";
 
 export const Footer = () => {
   return (
     <StyledFooter>
-      <Name>Leonid</Name>
-      <SocialIcon />
-      <Copyright>© 2024 Leonid Talaev, all rights reserved.</Copyright>
+      <Container>
+        <Name>Leonid</Name>
+        <SocialIcon />
+        <Copyright>© 2024 Leonid Talaev, all rights reserved.</Copyright>
+      </Container>
     </StyledFooter>
   );
 };

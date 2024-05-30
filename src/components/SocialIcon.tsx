@@ -26,4 +26,6 @@ const StyledSocialIcon = styled.div`
   gap: 10px;
 `;
 
-const SocialIconList = styled.a``;
+const SocialIconList = styled.a`
+  cursor: pointer;
+`;
