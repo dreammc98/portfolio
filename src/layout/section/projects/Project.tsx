@@ -1,8 +1,6 @@
 import styled from "styled-components";
 import photo from "../../../assets/images/project.png";
 import { Icon } from "../../../components/icon/Icon";
-import { FlexWrapper } from "../../../components/FlexWrapper";
-import { Description } from "../../../components/Description";
 
 type ProjectPropsType = {
   title: string;
@@ -17,19 +15,24 @@ export const Project = (props: ProjectPropsType) => {
       <ProjectBody>
         <Title>{props.title}</Title>
         <Description>{props.descript}</Description>
-        <div>
-          <span>Tech stack :</span> <span> {props.stack}</span>
-        </div>
-        <FlexWrapper justify="space-between">
+        <Stack>
+          Tech stack : <span> {props.stack}</span>
+        </Stack>
+        <SeeProject>
           <a href="#">
             <Icon iconId="connectSvg" widthIcon="22px" heightIcon="22px" viewBoxIcon="0 0 20 20" />
-            Live Preview
+            <span>Live Preview</span>
           </a>
           <a href="#">
-            <Icon iconId="githubSvg" widthIcon="22px" heightIcon="22px" />
-            View Code
+            <Icon
+              iconId="githubSvg"
+              widthIcon="22px"
+              heightIcon="22px"
+              viewBoxIcon="0 -15 100 100"
+            />
+            <span>View Code</span>
           </a>
-        </FlexWrapper>
+        </SeeProject>
       </ProjectBody>
     </StyledProject>
   );
@@ -47,7 +50,51 @@ const StyledProject = styled.div`
 `;
 
 const ProjectBody = styled.div`
-  padding: 27px 45px 25px 30px;
+  display: flex;
+  flex-direction: column;
+  padding: 30px 30px 0;
+  margin-bottom: 20px;
+
+  color: #ccc;
 `;
 
-const Title = styled.h3``;
+const Title = styled.h3`
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 93%;
+  text-align: center;
+`;
+
+const Description = styled.p`
+  margin: 17px 0 17px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+`;
+
+const Stack = styled.div`
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  margin-bottom: 20px;
+
+  span {
+    font-weight: 300;
+    font-size: 14px;
+  }
+`;
+
+const SeeProject = styled.div`
+  display: flex;
+  justify-content: space-between;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  text-decoration: underline;
+  color: #fff;
+
+  span {
+    margin-left: 10px;
+  }
+`;

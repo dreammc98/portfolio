@@ -21,10 +21,9 @@ export const Main = () => {
   );
 };
 
-const StyledMain = styled.div`
-  padding-top: 200px;
-  min-height: 100vh;
-  background-color: black;
+const StyledMain = styled.section`
+  display: flex;
+  padding: 250px 0 200px 0;
   color: #d9d9d9;
 `;
 

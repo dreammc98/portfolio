@@ -19,10 +19,4 @@ export const SectionSkills = () => {
   );
 };
 
-const StyledSectionSkills = styled.section`
-  min-height: 100vh;
-  background-color: black;
-  span {
-    color: #a7a7a7;
-  }
-`;
+const StyledSectionSkills = styled.section``;

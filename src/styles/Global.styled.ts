@@ -23,6 +23,11 @@ code {
     monospace;
 }
 
+section {
+  padding: 100px 0;
+  background-color: black;
+}
+
 a {
     text-decoration: none;
 }

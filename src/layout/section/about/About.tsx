@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { SectionTitle } from "../../../components/SectionTitle";
-import { Description } from "../../../components/Description";
 import { Container } from "../../../components/Container";
 
 export const About = () => {
@@ -25,3 +24,5 @@ const StyledAbout = styled.section`
   font-weight: 700;
   font-style: normal;
 `;
+
+const Description = styled.p``;

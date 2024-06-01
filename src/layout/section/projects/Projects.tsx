@@ -7,19 +7,20 @@ import { Container } from "../../../components/Container";
 
 const myProject = [
   {
-    title: "Project Tile goes here 1",
-    descript: "This is sample project description random 1",
-    stack: "Html 1",
+    title: "Project Tile goes here",
+    descript:
+      "Были реализованный: главная страница, страница корзины, запросы на сервер и тдБыли реализованный: главная страница, страница корзины, запросы на сервер и тдБыли реализованный: главная страница, страница корзины, запросы на сервер и тд",
+    stack: "HTML , JavaScript, SASS, React",
   },
   {
     title: "Project Tile goes here 2",
-    descript: "This is sample project description random 2",
-    stack: "Html 2",
+    descript: "Были реализованный: главная страница, страница корзины, запросы на сервер и тд",
+    stack: "HTML , JavaScript, SASS, React",
   },
   {
     title: "Project Tile goes here 3",
-    descript: "This is sample project description random 3",
-    stack: "Html 3",
+    descript: "Были реализованный: главная страница, страница корзины, запросы на сервер и тд",
+    stack: "HTML , JavaScript, SASS, React",
   },
   {
     title: "Project Tile goes here 4",
@@ -28,12 +29,12 @@ const myProject = [
   },
   {
     title: "Project Tile goes here 5",
-    descript: "This is sample project description random 5",
+    descript: "Были реализованный: главная страница, страница корзины, запросы на сервер и тд",
     stack: "Html 5",
   },
   {
     title: "Project Tile goes here 6",
-    descript: "This is sample project description random 6",
+    descript: "This is s  ",
     stack: "Html 6",
   },
 ];
@@ -46,7 +47,7 @@ export const Projects = () => {
           <SectionTitle>Projects</SectionTitle>
           <SectionDescript>Things I’ve built so far</SectionDescript>
         </FlexWrapper>
-        <FlexWrapper wrap="wrap" gap="65px 46px" justify="center">
+        <FlexWrapper wrap="wrap" gap="65px 46px" justify="center" align="flex-start">
           {myProject.map((project, index) => {
             return (
               <Project
@@ -63,7 +64,4 @@ export const Projects = () => {
   );
 };
 
-const StyledProjects = styled.section`
-  min-height: 100vh;
-  background-color: black;
-`;
+const StyledProjects = styled.section``;
