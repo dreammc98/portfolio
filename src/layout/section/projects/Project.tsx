@@ -20,7 +20,7 @@ export const Project = (props: ProjectPropsType) => {
         </Stack>
         <SeeProject>
           <a href="#">
-            <Icon iconId="connectSvg" widthIcon="22px" heightIcon="22px" viewBoxIcon="0 0 20 20" />
+            <Icon iconId="connectSvg" widthIcon="22px" heightIcon="22px" viewBoxIcon="0 -6 25 25" />
             <span>Live Preview</span>
           </a>
           <a href="#">
@@ -91,10 +91,32 @@ const SeeProject = styled.div`
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-size: 16px;
-  text-decoration: underline;
   color: #fff;
 
   span {
-    margin-left: 10px;
+    position: relative;
+    margin-left: 5px;
+    ::before {
+      content: "";
+      display: inline-block;
+      width: 100%;
+      height: 2px;
+      background-color: white;
+      position: absolute;
+      bottom: 0px;
+      right: 0;
+      transition: 0.1s;
+    }
+  }
+
+  a {
+    :hover {
+      span {
+        ::before {
+          transform: translateY(5%);
+          height: 0;
+        }
+      }
+    }
   }
 `;

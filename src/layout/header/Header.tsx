@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { Menu } from "../../components/menu/Menu";
-import { SocialIcon } from "../../components/SocialIcon";
+import { SocialIcon } from "../../components/IconsGroup";
 import { Container } from "../../components/Container";
 import { FlexWrapper } from "../../components/FlexWrapper";
 

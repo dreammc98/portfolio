@@ -64,4 +64,6 @@ export const Projects = () => {
   );
 };
 
-const StyledProjects = styled.section``;
+const StyledProjects = styled.section`
+  margin-bottom: 200px;
+`;

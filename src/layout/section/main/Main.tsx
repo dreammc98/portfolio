@@ -14,7 +14,7 @@ export const Main = () => {
             </Name>
             <MainTitle>I'm a frontend developer</MainTitle>
           </div>
-          <Photo src={photo} alt="" />
+          <Photo src={photo} alt="Image" />
         </FlexWrapper>
       </Container>
     </StyledMain>
@@ -28,7 +28,7 @@ const StyledMain = styled.section`
 `;
 
 const Photo = styled.img`
-  max-width: 340px;
+  max-width: 450px;
   object-fit: cover;
   border-radius: 10%;
   -webkit-box-shadow: 0px 0px 300px -23px rgba(0, 192, 253, 0.6);
@@ -41,7 +41,8 @@ const MainTitle = styled.h1`
   font-weight: 700;
 `;
 
-const Name = styled.h2`
+export const Name = styled.h2`
   font-size: 58px;
   font-weight: 700;
+  color: #d9d9d9;
 `;

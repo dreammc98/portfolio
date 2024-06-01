@@ -28,4 +28,7 @@ const StyledSocialIcon = styled.div`
 
 const SocialIconList = styled.a`
   cursor: pointer;
+  :hover {
+    transform: scale(1.2);
+  }
 `;
