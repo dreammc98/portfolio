@@ -1,12 +1,13 @@
 import styled from "styled-components";
+import { theme } from "../../styles/Theme";
 
 type MenuPropsType = {
   menuItems: Array<string>; // Array<string> или string[];
 };
 
-export const Menu = (props: MenuPropsType) => {
+export const DesktopMenu = (props: MenuPropsType) => {
   return (
-    <StyledMenu>
+    <StyledDesktopMenu>
       <ul>
         {props.menuItems.map((item, index) => {
           return (
@@ -16,14 +17,14 @@ export const Menu = (props: MenuPropsType) => {
           );
         })}
       </ul>
-    </StyledMenu>
+    </StyledDesktopMenu>
   );
 };
 
-const StyledMenu = styled.nav`
+const StyledDesktopMenu = styled.nav`
   ul {
     display: flex;
-    gap: 50px;
+    gap: 40px;
     font-family: "DM Sans", sans-serif;
     font-weight: 500;
     font-size: 26px;
@@ -34,5 +35,9 @@ const StyledMenu = styled.nav`
     :hover {
       color: #d6d5d5;
     }
+  }
+
+  @media screen and (max-width: 900px) {
+    display: none;
   }
 `;

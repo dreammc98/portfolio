@@ -1,8 +1,9 @@
 import styled from "styled-components";
-import { Menu } from "../../components/menu/Menu";
+import { DesktopMenu } from "../../components/menu/DesktopMenu";
 import { SocialIcon } from "../../components/IconsGroup";
 import { Container } from "../../components/Container";
 import { FlexWrapper } from "../../components/FlexWrapper";
+import { MobileMenu } from "../../components/menu/MobileMenu";
 
 const menuItems = ["Home", "About", "Tech Stack", "Projects", "Contact"];
 
@@ -11,7 +12,8 @@ export const Header = () => {
     <StyledHeader>
       <Container>
         <FlexWrapper justify="space-between">
-          <Menu menuItems={menuItems} />
+          <DesktopMenu menuItems={menuItems} />
+          <MobileMenu menuItems={menuItems} />
           <SocialIcon />
         </FlexWrapper>
       </Container>
