@@ -55,6 +55,7 @@ const MainTitle = styled.h1`
 
 export const Name = styled.h2`
   font-size: 4.8em;
+  color: #d9d9d9;
   span {
     font-size: 20px;
   }

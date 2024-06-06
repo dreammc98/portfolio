@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import photo from "../../../assets/images/project.png";
 import { Icon } from "../../../components/icon/Icon";
+import { theme } from "../../../styles/Theme";
 
 type ProjectPropsType = {
   title: string;
@@ -11,7 +12,7 @@ type ProjectPropsType = {
 export const Project = (props: ProjectPropsType) => {
   return (
     <StyledProject>
-      <img src={photo} alt="" />
+      <Image></Image>
       <ProjectBody>
         <Title>{props.title}</Title>
         <Description>{props.descript}</Description>
@@ -39,14 +40,25 @@ export const Project = (props: ProjectPropsType) => {
 };
 
 const StyledProject = styled.div`
-  max-width: 375px;
-  /* width: 100%; */
+  max-width: 373px;
+  width: 100%;
   background-color: #363636;
   border-radius: 20px;
   color: #cccc;
+  font-size: 10px;
   a {
     color: white;
   }
+  @media ${theme.media.mobile} {
+    font-size: 9px;
+  }
+`;
+
+const Image = styled.div`
+  background-image: url(${photo});
+  background-position: center;
+  height: 260px;
+  object-fit: cover;
 `;
 
 const ProjectBody = styled.div`
@@ -61,7 +73,7 @@ const ProjectBody = styled.div`
 const Title = styled.h3`
   font-family: "Poppins", sans-serif;
   font-weight: 500;
-  font-size: 28px;
+  font-size: 2.8em;
   line-height: 93%;
   text-align: center;
 `;
@@ -70,18 +82,18 @@ const Description = styled.p`
   margin: 17px 0 17px;
   font-family: "Poppins", sans-serif;
   font-weight: 300;
-  font-size: 18px;
+  font-size: 1.8em;
 `;
 
 const Stack = styled.div`
   font-family: "Poppins", sans-serif;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 1.6em;
   margin-bottom: 20px;
 
   span {
     font-weight: 300;
-    font-size: 14px;
+    font-size: 0.9em;
   }
 `;
 
@@ -90,12 +102,13 @@ const SeeProject = styled.div`
   justify-content: space-between;
   font-family: "Poppins", sans-serif;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 1.6em;
   color: #fff;
 
   span {
     position: relative;
     margin-left: 5px;
+
     ::before {
       content: "";
       display: inline-block;

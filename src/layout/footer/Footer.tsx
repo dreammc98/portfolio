@@ -1,14 +1,14 @@
 import styled from "styled-components";
 import { SocialIcon } from "../../components/IconsGroup";
 import { Container } from "../../components/Container";
-import { Name } from "../section/main/Main";
+import { theme } from "../../styles/Theme";
 
 export const Footer = () => {
   return (
     <StyledFooter>
       <Container>
         <FooterBody>
-          <Name>Leonid</Name>
+          <FooterName>Leonid</FooterName>
           <IconsWrapper>
             <SocialIcon />
           </IconsWrapper>
@@ -31,6 +31,13 @@ const FooterBody = styled.div`
   padding: 45px 0 55px;
 `;
 
+const FooterName = styled.h2`
+  font-size: 48px;
+  color: #d9d9d9;
+  @media ${theme.media.mobile} {
+    font-size: 28px;
+  }
+`;
 const IconsWrapper = styled.div`
   margin: 25px 0 30px;
 `;

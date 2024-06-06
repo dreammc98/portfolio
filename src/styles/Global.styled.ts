@@ -18,6 +18,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   line-height: 1.2;
+  min-width: 360px;
 }
 
 code {
@@ -29,7 +30,7 @@ section {
   padding: 100px 0;
 
   @media ${theme.media.mobile} {
-    padding: 50px
+    padding: 50px 0
   }
 }
 
