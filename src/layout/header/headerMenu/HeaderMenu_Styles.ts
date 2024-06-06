@@ -1,38 +1,6 @@
 import styled, { css } from "styled-components";
-import { theme } from "../../styles/Theme";
 
-type MenuPropsType = {
-  menuItems: Array<string>; // Array<string> или string[];
-};
-
-export const MobileMenu = (props: MenuPropsType) => {
-  return (
-    <StyledMobileMenu>
-      <BurgerButton isOpen={false}>
-        <span></span>
-      </BurgerButton>
-
-      <MobileMenuPopup isOpen={false}>
-        <ul>
-          {props.menuItems.map((item, index) => {
-            return (
-              <li key={index}>
-                <a href="#">{item}</a>
-              </li>
-            );
-          })}
-        </ul>
-      </MobileMenuPopup>
-    </StyledMobileMenu>
-  );
-};
-
-const StyledMobileMenu = styled.nav`
-  display: none;
-  @media screen and (max-width: 900px) {
-    display: block;
-  }
-`;
+const MobileMenu = styled.nav``;
 
 const BurgerButton = styled.button<{ isOpen: boolean }>`
   position: fixed;
@@ -124,3 +92,28 @@ const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
     }
   }
 `;
+
+const DesktopMenu = styled.nav`
+  ul {
+    display: flex;
+    gap: 40px;
+    font-family: "DM Sans", sans-serif;
+    font-weight: 500;
+    font-size: 26px;
+  }
+  a {
+    color: #a7a7a7;
+    cursor: pointer;
+    :hover {
+      color: #d6d5d5;
+    }
+  }
+`;
+export const S = {
+  // mobile
+  MobileMenu,
+  BurgerButton,
+  MobileMenuPopup,
+  // desktop
+  DesktopMenu,
+};
