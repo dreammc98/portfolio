@@ -1,10 +1,10 @@
 import styled from "styled-components";
 import { SectionTitle } from "../../../components/SectionTitle";
 import { FlexWrapper } from "../../../components/FlexWrapper";
-import { Skills } from "./Skills";
+import { DesktopSkills } from "./skills/DesktopSkills";
 import { SectionDescript } from "../../../components/SectionDescript";
 import { Container } from "../../../components/Container";
-import { MobileSkills } from "./MobileSkills";
+import { MobileSkills } from "./skills/MobileSkills";
 
 export const SectionSkills = () => {
   return (
@@ -14,7 +14,7 @@ export const SectionSkills = () => {
           <SectionTitle>My Tech Stack</SectionTitle>
           <SectionDescript> Technologies I’ve been working with recently</SectionDescript>
         </FlexWrapper>
-        <Skills />
+        <DesktopSkills />
         <MobileSkills />
       </Container>
     </StyledSectionSkills>

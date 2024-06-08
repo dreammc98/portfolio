@@ -1,5 +1,7 @@
 import styled, { css } from "styled-components";
 
+//mobile
+
 const MobileMenu = styled.nav``;
 
 const BurgerButton = styled.button<{ isOpen: boolean }>`
@@ -92,6 +94,8 @@ const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
     }
   }
 `;
+
+//desktop
 
 const DesktopMenu = styled.nav`
   ul {

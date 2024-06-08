@@ -1,9 +1,9 @@
 import styled from "styled-components";
-import { FlexWrapper } from "../../../components/FlexWrapper";
-import { Skill } from "./Skill";
-import { theme } from "../../../styles/Theme";
+import { FlexWrapper } from "../../../../components/FlexWrapper";
+import { Skill } from "../Skill";
+import { theme } from "../../../../styles/Theme";
 
-export const Skills = () => {
+export const DesktopSkills: React.FC = () => {
   return (
     <SkillsStyled>
       <FlexWrapper wrap="wrap" justify="center" align="center" gap="100px">
@@ -26,7 +26,7 @@ export const Skills = () => {
 };
 
 const SkillsStyled = styled.div`
-  @media ${theme.media.mobile} {
+  @media ${theme.media.tablet} {
     display: none;
   }
 `;

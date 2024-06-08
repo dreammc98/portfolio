@@ -29,7 +29,7 @@ code {
 section {
   padding: 100px 0;
 
-  @media ${theme.media.mobile} {
+  @media ${theme.media.tablet} {
     padding: 50px 0
   }
 }

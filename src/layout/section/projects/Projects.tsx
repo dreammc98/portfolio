@@ -39,7 +39,7 @@ const myProject = [
   },
 ];
 
-export const Projects = () => {
+export const Projects: React.FC = () => {
   return (
     <StyledProjects>
       <Container>
