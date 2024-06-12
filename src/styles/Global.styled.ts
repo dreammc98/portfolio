@@ -10,6 +10,12 @@ export const GlobalStyled = createGlobalStyle`
     box-sizing: border-box;
 }
 
+* {
+  cursor: default;
+}
+
+
+
 body {
   background-color: black;
   font-family: "Poppins", -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',

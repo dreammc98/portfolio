@@ -41,7 +41,7 @@ const myProject = [
 
 export const Projects: React.FC = () => {
   return (
-    <StyledProjects>
+    <StyledProjects id="projects">
       <Container>
         <FlexWrapper direction="column" align="center">
           <SectionTitle>Projects</SectionTitle>
@@ -64,6 +64,4 @@ export const Projects: React.FC = () => {
   );
 };
 
-const StyledProjects = styled.section`
-  margin-bottom: 200px;
-`;
+const StyledProjects = styled.section``;

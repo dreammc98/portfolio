@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { theme } from "../../styles/Theme";
 
 const Footer = styled.footer`
+  margin-top: 200px;
   background-color: black;
 `;
 

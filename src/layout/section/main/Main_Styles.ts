@@ -18,11 +18,29 @@ const Main = styled.section`
   }
 `;
 
+const WrapperImg = styled.div`
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  background: -webkit-linear-gradient(#e70faa, #00c0fd);
+  background: linear-gradient(#e70faa, #00c0fd);
+  border-radius: 100%;
+  ::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 100%;
+    background: url("../../../assets/images/abstract.png");
+  }
+`;
+
 const Photo = styled.img`
-  max-width: 450px;
+  padding: 8px;
+  max-width: 350px;
   width: 100%;
   object-fit: cover;
-  border-radius: 10%;
+  border-radius: 100%;
   -webkit-box-shadow: 0px 0px 300px -23px rgba(0, 192, 253, 0.6);
   -moz-box-shadow: 0px 0px 300px -23px rgba(0, 192, 253, 0.6);
   box-shadow: 0px 0px 300px -23px rgba(0, 192, 253, 0.6);
@@ -42,6 +60,7 @@ const Name = styled.h2`
 
 export const S = {
   Main,
+  WrapperImg,
   Photo,
   MainTitle,
   Name,

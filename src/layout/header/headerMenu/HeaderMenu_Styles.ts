@@ -4,13 +4,13 @@ import styled, { css } from "styled-components";
 
 const MobileMenu = styled.nav``;
 
-const BurgerButton = styled.button<{ isOpen: boolean }>`
+const BurgerButton = styled.button<{ isOpen: boolean; headerSizeChanges: boolean }>`
   position: fixed;
   left: 10px;
-  top: 55px;
+  top: ${(props) => (props.headerSizeChanges ? "28px" : "50px")};
+  /* top: 55px; */
   z-index: 99999;
-  transition: 2s;
-
+  transition: top 0.5s;
   span {
     display: block;
     width: 40px;
@@ -31,7 +31,7 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
       background-color: #a7a7a7;
       position: absolute;
       transform: translateY(-10px);
-
+      transition: transform 0.5s;
       ${(props) =>
         props.isOpen &&
         css<{ isOpen: boolean }>`
@@ -46,7 +46,7 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
       background-color: #a7a7a7;
       position: absolute;
       transform: translateY(10px);
-
+      transition: transform 0.5s;
       ${(props) =>
         props.isOpen &&
         css<{ isOpen: boolean }>`
@@ -64,18 +64,17 @@ const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
   right: 0;
   bottom: 0;
   background-color: black;
-  opacity: 0.9;
+  opacity: 0;
   z-index: 9999;
-  display: none;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s;
   ${(props) =>
     props.isOpen &&
     css<{ isOpen: boolean }>`
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      opacity: 0.9;
     `}
-
   ul {
     display: flex;
     justify-content: center;
@@ -89,8 +88,9 @@ const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
   a {
     color: #a7a7a7;
     cursor: pointer;
-    :hover {
-      color: #d6d5d5;
+    :hover,
+    &.active {
+      color: #eae9e9;
     }
   }
 `;
@@ -108,8 +108,9 @@ const DesktopMenu = styled.nav`
   a {
     color: #a7a7a7;
     cursor: pointer;
-    :hover {
-      color: #d6d5d5;
+    :hover,
+    &.active {
+      color: #eae9e9;
     }
   }
 `;

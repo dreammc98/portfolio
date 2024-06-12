@@ -9,7 +9,7 @@ export const MobileSkills: React.FC = () => {
       <FlexWrapper wrap="wrap" justify="center" align="center" gap="50px">
         <Skill iconId="htmlSvg" width="60" height="60" />
         <Skill iconId="cssSvg" width="60" height="60" />
-        <Skill iconId="sassSvg" width="60" height="60" />
+        <Skill iconId="sassSvg" width="60" height="60" viewBoxIcon="0 -15 120 120" />
         <Skill iconId="jsSvg" width="60" height="60" />
         <Skill iconId="tsSvg" viewBoxIcon="0 0 640 640" width="60" height="60" />
         <Skill iconId="reactSvg" width="60" height="60" />

@@ -6,7 +6,11 @@ import { MobileMenu } from "./headerMenu/mobileMenu/MobileMenu";
 import { S } from "./Header_Styles";
 import React, { useEffect, useState } from "react";
 
-const menuItems = ["Home", "About", "Tech Stack", "Projects", "Contact"];
+const menuItems = [
+  { title: "Home", href: "home" },
+  { title: "Tech Stack", href: "stack" },
+  { title: "Projects", href: "projects" },
+];
 
 export const Header: React.FC = () => {
   const [width, setWidth] = useState(window.innerWidth);
@@ -19,14 +23,22 @@ export const Header: React.FC = () => {
     return () => window.removeEventListener("resize", handleWindowResize);
   }, []);
 
+  const [headerSizeChanges, setHeaderSizeChanges] = useState(false);
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      window.scrollY > 200 ? setHeaderSizeChanges(true) : setHeaderSizeChanges(false);
+    });
+  });
+
   return (
-    <S.Header>
+    <S.Header headerSizeChanges={headerSizeChanges}>
       <Container>
         <FlexWrapper justify="space-between">
           {width > breakpoint ? (
             <DesktopMenu menuItems={menuItems} />
           ) : (
-            <MobileMenu menuItems={menuItems} />
+            <MobileMenu menuItems={menuItems} headerSizeChanges={headerSizeChanges} />
           )}
 
           <SocialIcon />

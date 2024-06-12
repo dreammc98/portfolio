@@ -8,7 +8,7 @@ import { MobileSkills } from "./skills/MobileSkills";
 
 export const SectionSkills = () => {
   return (
-    <StyledSectionSkills>
+    <StyledSectionSkills id="stack">
       <Container>
         <FlexWrapper justify="center" direction="column" align="center">
           <SectionTitle>My Tech Stack</SectionTitle>

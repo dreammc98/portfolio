@@ -1,8 +1,10 @@
-import React from "react";
+import React, { MouseEventHandler } from "react";
+import { Link } from "react-scroll";
 import styled from "styled-components";
 
 export type MenuPropsType = {
-  menuItems: Array<string>; // Array<string> или string[];
+  menuItems: Array<{ title: string; href: string }>;
+  changeMenuState?: () => void;
 };
 
 export const Menu: React.FC<MenuPropsType> = (props: MenuPropsType) => {
@@ -11,7 +13,16 @@ export const Menu: React.FC<MenuPropsType> = (props: MenuPropsType) => {
       {props.menuItems.map((item, index) => {
         return (
           <li key={index}>
-            <a href="#">{item}</a>
+            <Link
+              activeClass="active"
+              to={item.href}
+              smooth="true"
+              spy={true}
+              offset={-50}
+              onClick={props.changeMenuState}
+            >
+              {item.title}
+            </Link>
           </li>
         );
       })}
